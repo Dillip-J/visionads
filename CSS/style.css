@@ -94,12 +94,69 @@ nav { height: 80px; display: flex; align-items: center; position: fixed; width: 
 }
 
 /* FOOTER */
-footer { background: var(--footer-bg); color: white; padding: 80px 0; }
-.footer-content { display: flex; justify-content: space-between; align-items: flex-end; }
-.footer-left h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 20px; }
-.footer-left a { color: white; text-decoration: none; border-bottom: 1px solid white; padding-bottom: 5px; }
-.footer-right { text-align: right; color: #888; font-size: 0.85rem; }
-.address { margin-top: 10px; max-width: 300px; margin-left: auto; }
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 0 20px; /* Reduced bottom padding */
+}
+
+/* Flex container for the main content */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333; /* Adds a subtle divider line */
+}
+
+.footer-cta h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.footer-cta a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.footer-cta a:hover {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.footer-address-block {
+    text-align: right;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+/* The New Centered Legal Section */
+.footer-legal {
+    text-align: center; /* Puts it in the middle bottom */
+    color: #555;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-address-block {
+        text-align: left;
+    }
+}
 
 /* Responsive adjustments */
 @media(max-width: 768px) {
