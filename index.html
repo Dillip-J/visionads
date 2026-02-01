@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION ADS | Connected Brand Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">VISION ADS</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#services">Business Area</a>
+                <a href="#awards">Recognition</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-btn"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-background">
+            </div>
+        <div class="hero-overlay-box">
+            <span class="hero-label">Vision Ads • Est 2007</span>
+            <h1>Creating<br>Connected Experiences<br><span class="highlight">That Matter.</span></h1>
+            <p>We are a complete Indoor-Outdoor Agency blending physical fabrication with digital performance.</p>
+            <div class="hero-footer">
+                <a href="#work">View Work <i data-lucide="arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="awards" class="history-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recognition & Trust</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="history-grid">
+                <div class="history-card active">
+                    <div class="year">2026</div>
+                    <div class="card-content">
+                        <h3>Justdial Users' Choice</h3>
+                        <p>Rated 4.8/5 Stars by customers across Andhra Pradesh. Recognized for excellence in Signage and Branding.</p>
+                        <div class="jd-badge-ref">
+                            <i data-lucide="star" fill="gold" stroke="none"></i>
+                            <i data-lucide="star" fill="gold" stroke="none"></i>
+                            <i data-lucide="star" fill="gold" stroke="none"></i>
+                            <i data-lucide="star" fill="gold" stroke="none"></i>
+                            <i data-lucide="star" fill="gold" stroke="none"></i>
+                        </div>
+                        <span class="source-cite"></span>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="year">15+</div>
+                    <div class="card-content">
+                        <h3>Years of Excellence</h3>
+                        <p>From a local fabrication unit in Chittoor to a Pan-India branding partner for Airtel, Honda, and Joyalukkas.</p>
+                        <span class="source-cite"></span>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="year">360°</div>
+                    <div class="card-content">
+                        <h3>Full-Stack Capability</h3>
+                        <p>In-house HP Latex & Roland machinery combined with a new Digital Marketing division.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="business-area">
+        <div class="container">
+            <h2>Business Area</h2>
+            
+            <div class="service-tabs">
+                <div class="tab-item active" onclick="showService('strategic')">
+                    <div class="tab-icon"><i data-lucide="map"></i></div>
+                    <span>Strategic Solution</span>
+                </div>
+                <div class="tab-item" onclick="showService('signage')">
+                    <div class="tab-icon"><i data-lucide="hammer"></i></div>
+                    <span>Signage & Build</span>
+                </div>
+                <div class="tab-item" onclick="showService('digital')">
+                    <div class="tab-icon"><i data-lucide="monitor-play"></i></div>
+                    <span>Digital Marketing</span>
+                </div>
+                <div class="tab-item" onclick="showService('print')">
+                    <div class="tab-icon"><i data-lucide="printer"></i></div>
+                    <span>Print Production</span>
+                </div>
+            </div>
+
+            <div class="service-content-wrapper">
+                <div id="content-display" class="service-detail">
+                    <h3 id="svc-title">Strategic Solution</h3>
+                    <p id="svc-desc">
+                        Brand is everything. We provide end-to-end consultation for B2B and B2C brands, from logo conceptualization to market positioning strategies.
+                    </p>
+                    <ul id="svc-list">
+                        <li>Brand Identity Design</li>
+                        <li>Market Research</li>
+                        <li>Campaign Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="network-section">
+        <div class="container">
+            <div class="network-layout">
+                <div class="network-info">
+                    <h2>Pan-India<br>Network &<br>Affiliates</h2>
+                    <div class="line-short"></div>
+                    <p>Headquartered in Chittoor, serving brands across Mumbai, Delhi, Bangalore, and Chennai.</p>
+                    
+                    <div class="location-list">
+                        <div><strong>South</strong><br>Chennai, Bangalore, Chittoor (HQ)</div>
+                        <div><strong>North</strong><br>Delhi NCR</div>
+                        <div><strong>West</strong><br>Mumbai, Pune</div>
+                    </div>
+                </div>
+                
+                <div class="map-visual">
+                    <div class="dotted-map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="container footer-content">
+        <div class="footer-left">
+            <h3>Interested in our company?</h3>
+            <a href="javascript:void(0)" onclick="toggleContact()">Contact Us <i data-lucide="arrow-right" style="display:inline; width:16px;"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>© 2026 Vision Ads Group. All Rights Reserved.</p>
+            [cite_start]<p class="address">No:3, II Floor, K.M.Naidu Complex, Ponniyamman Koil Street, Chittoor-517001 [cite: 47]</p>
+        </div>
+    </div>
+</footer>
+
+<div id="contact-modal" class="contact-overlay">
+    <div class="contact-inner-wrapper">
+        
+        <div class="contact-header">
+            <h2>Contact us</h2>
+            <button class="close-btn" onclick="toggleContact()">
+                <i data-lucide="x" width="40" height="40"></i>
+            </button>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-panel">
+                <div class="info-group">
+                    <i data-lucide="mail"></i>
+                    <a href="mailto:visionadsctr@gmail.com">visionadsctr@gmail.com</a>
+                </div>
+
+                <div class="info-group">
+                    <i data-lucide="phone"></i>
+                    <a href="tel:+919000699609">+91 9000 699 609</a>
+                </div>
+
+                <div class="info-group">
+                    <i data-lucide="map-pin"></i>
+                    <p>
+                        <strong>Vision Ads (HQ)</strong><br>
+                        No:3, II Floor, K.M.Naidu Complex,<br>
+                        Ponniyamman Koil Street,<br>
+                        Chittoor - 517001, Andhra Pradesh
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-map-panel">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.467406256627!2d79.098!3d13.217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad5c1a67035661%3A0x62919d3004358607!2sChittoor%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1707000000000!5m2!1sen!2sin"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="JS/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

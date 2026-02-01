@@ -1,0 +1,238 @@
+:root {
+    --bg-white: #ffffff;
+    --bg-light: #f9f9f9;
+    --text-black: #111111;
+    --text-grey: #666666;
+    --accent-blue: #00a1e0; /* Similar to the cyan line in Cheil screenshot */
+    --footer-bg: #1a1a1a;
+    
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg-white); color: var(--text-black); font-family: var(--font-sans); overflow-x: hidden; }
+
+/* UTILS */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+h2 { font-family: var(--font-sans); font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; }
+.line { width: 50px; height: 3px; background: var(--text-black); margin-bottom: 40px; }
+
+/* NAV */
+nav { height: 80px; display: flex; align-items: center; position: fixed; width: 100%; bg: white; z-index: 1000; background: rgba(255,255,255,0.95); border-bottom: 1px solid #eee; }
+.nav-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; text-decoration: none; color: black; }
+.nav-links { display: flex; gap: 40px; }
+.nav-links a { text-decoration: none; color: var(--text-black); font-size: 0.9rem; font-weight: 500; }
+.menu-btn { background: none; border: none; cursor: pointer; display: none; }
+
+/* HERO - "THE WHITE BOX" */
+.hero-section { height: 100vh; position: relative; background: #e0e0e0; display: flex; align-items: center; justify-content: flex-start; }
+.hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80') center/cover; }
+.hero-overlay-box {
+    position: relative;
+    background: white;
+    width: 45%;
+    height: 70%;
+    margin-left: 10%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+.hero-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-grey); margin-bottom: 20px; display: block; }
+.hero-overlay-box h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 30px; font-weight: 400; }
+.hero-overlay-box p { color: var(--text-grey); font-size: 1.1rem; max-width: 400px; margin-bottom: 40px; }
+.hero-footer a { text-decoration: none; color: black; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+
+/* AWARDS / HISTORY (Cards) */
+.history-section { padding: 100px 0; background: var(--bg-light); }
+.history-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
+.history-card { background: white; padding: 40px; height: 350px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid transparent; transition: 0.3s; }
+.history-card:hover { border-color: #ddd; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.year { font-family: var(--font-serif); font-size: 3rem; color: var(--text-black); margin-bottom: 20px; }
+.history-card h3 { font-size: 1.2rem; margin-bottom: 15px; }
+.history-card p { color: var(--text-grey); font-size: 0.9rem; line-height: 1.6; }
+.progress-bar-container { width: 100%; height: 4px; background: #e0e0e0; margin-top: 40px; }
+.progress-bar { width: 33%; height: 100%; background: var(--accent-blue); }
+.jd-badge-ref { margin-top: 15px; display: flex; gap: 5px; }
+.source-cite { font-size: 0.7rem; color: #aaa; margin-top: 10px; display: block; }
+
+/* BUSINESS AREA (Icons) */
+.business-area { padding: 120px 0; }
+.service-tabs { display: flex; justify-content: space-between; margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 0; }
+.tab-item { text-align: center; padding: 20px 40px; cursor: pointer; opacity: 0.6; transition: 0.3s; border-bottom: 3px solid transparent; }
+.tab-item:hover, .tab-item.active { opacity: 1; border-bottom-color: black; }
+.tab-icon { margin-bottom: 15px; }
+.tab-icon svg { width: 40px; height: 40px; stroke-width: 1px; }
+
+.service-content-wrapper { background: var(--bg-light); padding: 60px; border-radius: 4px; }
+.service-detail h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 20px; }
+.service-detail p { max-width: 600px; color: var(--text-grey); margin-bottom: 30px; }
+.service-detail ul { list-style: none; padding-left: 0; display: flex; gap: 30px; }
+.service-detail li { font-weight: 600; font-size: 0.9rem; position: relative; }
+.service-detail li::before { content: "•"; color: var(--accent-blue); margin-right: 10px; }
+
+/* NETWORK (Dotted Map) */
+.network-section { padding: 100px 0; overflow: hidden; }
+.network-layout { display: flex; align-items: center; }
+.network-info { width: 40%; padding-right: 50px; }
+.location-list { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; font-size: 0.9rem; color: var(--text-grey); }
+.location-list strong { color: black; display: block; margin-bottom: 5px; }
+
+.map-visual { width: 60%; height: 500px; position: relative; }
+.dotted-map {
+    width: 100%; height: 100%;
+    background-image: radial-gradient(#ccc 1.5px, transparent 1.5px);
+    background-size: 15px 15px; /* Creates the dotted grid effect like Cheil */
+    mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2c/India-map-en.svg'); /* This masks the dots to India shape */
+    -webkit-mask-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2c/India-map-en.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    background-color: transparent;
+}
+
+/* FOOTER */
+footer { background: var(--footer-bg); color: white; padding: 80px 0; }
+.footer-content { display: flex; justify-content: space-between; align-items: flex-end; }
+.footer-left h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 20px; }
+.footer-left a { color: white; text-decoration: none; border-bottom: 1px solid white; padding-bottom: 5px; }
+.footer-right { text-align: right; color: #888; font-size: 0.85rem; }
+.address { margin-top: 10px; max-width: 300px; margin-left: auto; }
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .hero-overlay-box { width: 90%; margin: 0 auto; height: auto; }
+    .history-grid { grid-template-columns: 1fr; }
+    .service-tabs { flex-wrap: wrap; justify-content: center; }
+    .network-layout { flex-direction: column; }
+    .network-info { width: 100%; margin-bottom: 40px; }
+    .map-visual { width: 100%; }
+}
+
+/* CONTACT OVERLAY - CHEIL STYLE */
+.contact-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; /* Stark white background like reference */
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+    overflow-y: auto;
+}
+
+.contact-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-inner-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Close Button */
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Layout Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info takes less space than map */
+    gap: 60px;
+    height: 100%;
+}
+
+/* Info Panel Styling */
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.info-group i {
+    stroke-width: 1.5px;
+    width: 24px;
+    height: 24px;
+    color: #000;
+    margin-top: 5px;
+}
+
+.info-group a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.info-group a:hover {
+    color: #666;
+}
+
+.info-group p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Map Styling */
+.contact-map-panel {
+    background: #f0f0f0;
+    height: 500px; /* Fixed height for visual consistency */
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contact-map-panel {
+        height: 300px;
+    }
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+}
